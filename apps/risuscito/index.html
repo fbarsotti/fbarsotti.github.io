@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risuscitò - Canti del Cammino</title>
+  <meta name="description" content="Risuscitò è un'app per iPhone per consultare, cercare e ascoltare i canti del Cammino Neocatecumenale. Progetto personale, non ufficiale.">
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #964946;
+      --primary-soft: rgba(150, 73, 70, 0.08);
+      --bg: #F0F3F4;
+      --card: #FFFFFF;
+      --text: #1C1C1E;
+      --muted: #6B6B70;
+      --border: rgba(0, 0, 0, 0.08);
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #C9716D;
+        --primary-soft: rgba(201, 113, 109, 0.12);
+        --bg: #000000;
+        --card: #1C1C1E;
+        --text: #F2F2F7;
+        --muted: #A1A1A6;
+        --border: rgba(255, 255, 255, 0.1);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+    }
+    h1, h2, h3, .eyebrow, .button {
+      font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 32px;
+      font-size: 15px;
+    }
+    .hero {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .hero img {
+      flex: none;
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+    }
+    .eyebrow {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 15px;
+      margin: 0 0 2px;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+    .lead {
+      font-size: 18px;
+      margin: 0 0 24px;
+    }
+    .button {
+      display: inline-block;
+      background: var(--primary);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+    .button:hover, .button:focus-visible { filter: brightness(1.08); text-decoration: none; }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 12px 0 0;
+    }
+    section { margin-top: 40px; }
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 12px;
+    }
+    p { margin: 0 0 12px; }
+    .notice {
+      background: var(--primary-soft);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px 20px 8px;
+    }
+    .notice h2 { margin-bottom: 8px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0 0 4px;
+    }
+    .feature p { margin: 0; color: var(--muted); font-size: 15px; }
+    ul.plain { margin: 0; padding-left: 20px; }
+    ul.plain li { margin-bottom: 6px; }
+    a { color: var(--primary); font-weight: 500; text-decoration: none; }
+    a:hover, a:focus-visible { text-decoration: underline; }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../">‹ Tutte le app</a>
+
+    <div class="hero">
+      <img src="icon.png" alt="Icona di Risuscitò" width="96" height="96">
+      <div>
+        <p class="eyebrow">App per iPhone</p>
+        <h1>Risuscitò - Canti del Cammino</h1>
+      </div>
+    </div>
+    <p class="lead">Un modo comodo e veloce per consultare, cercare e ascoltare i canti del Cammino Neocatecumenale, direttamente dal tuo iPhone.</p>
+    <a class="button" href="https://apps.apple.com/app/id6449618139">Scarica su App Store</a>
+    <p class="meta">Gratuita · Senza pubblicità · Nessun dato raccolto</p>
+
+    <section class="notice">
+      <h2>Cosa non è</h2>
+      <p><strong>Risuscitò non è un'app ufficiale</strong> e non è collegata, approvata o sostenuta dal Cammino Neocatecumenale né dai suoi responsabili.</p>
+      <p>È un progetto personale, nato per offrire uno strumento comodo e performante per consultare i canti del Cammino in un momento in cui su iOS questo strumento mancava.</p>
+    </section>
+
+    <section>
+      <h2>Cos'è</h2>
+      <p>Risuscitò raccoglie i canti del Cammino con testo e accordi, e li rende facili da trovare quando servono: durante la preparazione di una celebrazione, in comunità o per suonare.</p>
+      <p>I canti sono inclusi nell'app, quindi testi e accordi si consultano anche senza connessione. Per ascoltare le registrazioni serve invece una connessione a Internet.</p>
+    </section>
+
+    <section>
+      <h2>Funzionalità</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Ricerca</h3>
+          <p>Trova un canto per titolo, per parole del testo o per riferimento biblico.</p>
+        </div>
+        <div class="feature">
+          <h3>Indici</h3>
+          <p>Alfabetico, numerico, biblico e liturgico: tempi liturgici, celebrazione eucaristica e altri canti.</p>
+        </div>
+        <div class="feature">
+          <h3>Tonalità e barré</h3>
+          <p>Trasponi gli accordi e scegli il barré: le impostazioni restano salvate per ogni canto.</p>
+        </div>
+        <div class="feature">
+          <h3>Ascolto</h3>
+          <p>Ascolta la registrazione del canto, quando disponibile.</p>
+        </div>
+        <div class="feature">
+          <h3>Preferiti e cronologia</h3>
+          <p>Salva i canti che usi più spesso e ritrova quelli visti di recente.</p>
+        </div>
+        <div class="feature">
+          <h3>Liste personalizzate</h3>
+          <p>Crea le tue liste di canti e organizzale come preferisci.</p>
+        </div>
+        <div class="feature">
+          <h3>Prepara una celebrazione</h3>
+          <p>Scegli i canti per la Parola o per l'Eucarestia e condividili su WhatsApp o copiandone il testo.</p>
+        </div>
+        <div class="feature">
+          <h3>Quattro lingue</h3>
+          <p>Italiano, inglese, ucraino e turco, con tema chiaro e scuro.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>Risuscitò non richiede registrazione, non raccoglie dati personali e non contiene pubblicità. Tutti i dettagli sono nella <a href="privacy/">Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Contatti</h2>
+      <p>Per domande, segnalazioni o suggerimenti scrivi a <a href="mailto:francescobarsotti02@gmail.com">francescobarsotti02@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+      <span>© Francesco Barsotti</span>
+      <a href="privacy/">Privacy Policy</a>
+      <a href="https://apps.apple.com/app/id6449618139">App Store</a>
+    </footer>
+  </main>
+</body>
+</html>

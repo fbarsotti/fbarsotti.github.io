@@ -48,18 +48,23 @@
       padding: 48px 16px 64px;
     }
     header { margin-bottom: 32px; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 24px -6px;
+    }
     .logo {
       display: block;
-      width: 88px;
-      height: 88px;
-      margin: 0 0 20px -8px;
+      width: 64px;
+      height: 64px;
     }
     .eyebrow {
-      color: var(--link);
+      color: var(--text);
       font-weight: 600;
-      font-size: 15px;
-      letter-spacing: 0.02em;
-      margin: 0 0 4px;
+      font-size: 20px;
+      letter-spacing: 0.01em;
+      margin: 0;
     }
     h1 {
       font-size: 34px;
@@ -105,6 +110,7 @@
       text-decoration: none;
     }
     a:hover, a:focus-visible { text-decoration: underline; }
+    a.title { color: var(--text); font-weight: 600; }
     footer {
       color: var(--muted);
       font-size: 14px;
@@ -115,19 +121,22 @@
 <body>
   <main>
     <header>
-      <picture>
-        <source srcset="assets/fblogo-dark.svg" media="(prefers-color-scheme: dark)">
-        <img class="logo" src="assets/fblogo.svg" alt="Logo di Francesco Barsotti">
-      </picture>
-      <p class="eyebrow">Francesco Barsotti</p>
+      <div class="brand">
+        <picture>
+          <source srcset="assets/fblogo-dark.svg" media="(prefers-color-scheme: dark)">
+          <img class="logo" src="assets/fblogo.svg" alt="">
+        </picture>
+        <p class="eyebrow">Francesco Barsotti</p>
+      </div>
       <h1>App</h1>
     </header>
     <div class="apps">
       <article class="app">
         <img src="risuscito/icon.png" alt="" width="60" height="60">
         <div>
-          <h2>Risuscitò - Canti del Cammino</h2>
+          <h2><a class="title" href="risuscito/">Risuscitò - Canti del Cammino</a></h2>
           <ul class="links">
+            <li><a href="risuscito/">Scopri l'app</a></li>
             <li><a href="risuscito/privacy/">Privacy Policy</a></li>
           </ul>
         </div>
