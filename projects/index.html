@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Francesco Barsotti</title>
-  <meta name="description" content="Francesco Barsotti: progetti e app.">
-  <link rel="icon" href="assets/fblogo.svg" type="image/svg+xml">
+  <title>Progetti · Francesco Barsotti</title>
+  <meta name="description" content="I progetti di Francesco Barsotti.">
+  <link rel="icon" href="../assets/fblogo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -49,6 +49,7 @@
     }
     header { margin-bottom: 32px; }
     .brand {
+      text-decoration: none;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -110,6 +111,7 @@
       text-decoration: none;
     }
     a:hover, a:focus-visible { text-decoration: underline; }
+    a.brand:hover, a.brand:focus-visible { text-decoration: none; opacity: 0.8; }
     a.title { color: var(--text); font-weight: 600; }
     /* Each project card uses its own accent (--app-accent / --app-accent-dark) */
     .app a:not(.title) { color: var(--app-accent, var(--link)); }
@@ -126,23 +128,23 @@
 <body>
   <main>
     <header>
-      <div class="brand">
+      <a class="brand" href="../">
         <picture>
-          <source srcset="assets/fblogo-dark.svg" media="(prefers-color-scheme: dark)">
-          <img class="logo" src="assets/fblogo.svg" alt="">
+          <source srcset="../assets/fblogo-dark.svg" media="(prefers-color-scheme: dark)">
+          <img class="logo" src="../assets/fblogo.svg" alt="">
         </picture>
         <p class="eyebrow">Francesco Barsotti</p>
-      </div>
+      </a>
       <h1>Progetti</h1>
     </header>
     <div class="apps">
       <article class="app" style="--app-accent: #964946; --app-accent-dark: #C9716D;">
-        <img src="projects/risuscito/icon.png" alt="" width="60" height="60">
+        <img src="risuscito/icon.png" alt="" width="60" height="60">
         <div>
-          <h2><a class="title" href="projects/risuscito/">Risuscitò - Canti del Cammino</a></h2>
+          <h2><a class="title" href="risuscito/">Risuscitò - Canti del Cammino</a></h2>
           <ul class="links">
-            <li><a href="projects/risuscito/">Scopri l'app</a></li>
-            <li><a href="projects/risuscito/privacy/">Privacy Policy</a></li>
+            <li><a href="risuscito/">Scopri l'app</a></li>
+            <li><a href="risuscito/privacy/">Privacy Policy</a></li>
           </ul>
         </div>
       </article>
