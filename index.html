@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --accent: #FF8001;
       --link: #B85A00;
       --bg: #F6F6F6;
       --card: #FFFFFF;
@@ -61,7 +60,7 @@
       height: 64px;
     }
     .eyebrow {
-      color: var(--accent);
+      color: var(--text);
       font-weight: 600;
       font-size: 20px;
       letter-spacing: 0.01em;
@@ -112,6 +111,11 @@
     }
     a:hover, a:focus-visible { text-decoration: underline; }
     a.title { color: var(--text); font-weight: 600; }
+    /* Each project card uses its own accent (--app-accent / --app-accent-dark) */
+    .app a:not(.title) { color: var(--app-accent, var(--link)); }
+    @media (prefers-color-scheme: dark) {
+      .app a:not(.title) { color: var(--app-accent-dark, var(--app-accent, var(--link))); }
+    }
     footer {
       color: var(--muted);
       font-size: 14px;
@@ -132,7 +136,7 @@
       <h1>App</h1>
     </header>
     <div class="apps">
-      <article class="app">
+      <article class="app" style="--app-accent: #964946; --app-accent-dark: #C9716D;">
         <img src="apps/risuscito/icon.png" alt="" width="60" height="60">
         <div>
           <h2><a class="title" href="apps/risuscito/">Risuscitò - Canti del Cammino</a></h2>
